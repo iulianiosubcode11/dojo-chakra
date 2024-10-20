@@ -1,5 +1,5 @@
 export default function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <div>Dashboard xx -cuc1</div>
   )
 }
