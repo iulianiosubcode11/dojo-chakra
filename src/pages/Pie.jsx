@@ -9,11 +9,11 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const backgroundCirclePlugin = {
   id: 'backgroundCircle',
   beforeDraw: (chart) => {
-    const { ctx, chartArea, width, height } = chart;
+    const { ctx, chartArea } = chart;
     const centerX = (chartArea.left + chartArea.right) / 2;
     const centerY = (chartArea.top + chartArea.bottom) / 2;
     const outerRadius = Math.min(chartArea.right - chartArea.left, chartArea.bottom - chartArea.top) / 2;
-    const innerRadius = outerRadius * 0.7; // Match the 70% cutout of the main chart
+    const innerRadius = outerRadius * 0.75; // Match the 70% cutout of the main chart
 
     ctx.save();
     ctx.beginPath();
@@ -28,8 +28,9 @@ const backgroundCirclePlugin = {
 const InvestmentPieChart = () => {
   const totalInvestment = 1065000;
   const investments = [
-    { value: 800000, color: '#48BB78', label: 'Class A' },
+    { value: 700000, color: '#48BB78', label: 'Class A' },
     { value: 200000, color: '#ED8936', label: 'Class B' },
+    { value: 100000, color: '#9F7AEA', label: 'Class C' }, // New purple circle
     { value: 65000, color: 'transparent', label: 'Other' },
   ];
 
@@ -39,14 +40,15 @@ const InvestmentPieChart = () => {
       {
         data: investments.map(i => i.value),
         backgroundColor: investments.map(i => i.color),
-        borderWidth: 0,
+        borderWidth: 0, // Adjust this value to change the border weight
+        borderColor: 'white', // This sets the color of the border
       },
     ],
   };
 
   const options = {
     responsive: true,
-    cutout: '70%',
+    cutout: '75%',
     plugins: {
       tooltip: {
         callbacks: {
@@ -98,6 +100,7 @@ const InvestmentPieChart = () => {
         <HStack justify="space-between">
           <Text>Class A: 200</Text>
           <Text>Class B: 50</Text>
+          <Text>Class C: 25</Text>
         </HStack>
         <Text mt={2} color="teal.300" cursor="pointer">
           Open company
