@@ -2,7 +2,7 @@ import {
   createBrowserRouter, 
   createRoutesFromElements, 
   Route, 
-  RouterProvider 
+  RouterProvider
 } from 'react-router-dom'
 
 // layouts and pages
@@ -10,6 +10,7 @@ import RootLayout from './layouts/RootLayout'
 import Dashboard from './pages/Dashboard'
 import Create from './pages/Create'
 import Profile from './pages/Profile'
+import Pie from './pages/Pie'
 
 // router and routes
 const router = createBrowserRouter(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route index element={<Dashboard />} />
       <Route path="create" element={<Create />} />
       <Route path="profile" element={<Profile />} />
+      <Route path="pie" element={<Pie />} />
     </Route>
   )
 )
