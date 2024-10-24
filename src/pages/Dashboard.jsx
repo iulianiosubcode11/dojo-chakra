@@ -1,4 +1,4 @@
-import { Box, Flex, SimpleGrid } from "@chakra-ui/react"
+import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react"
 
 export default function Dashboard() {
   return (
@@ -21,8 +21,10 @@ export default function Dashboard() {
     //   ))}
     // </Flex>
 
-    <SimpleGrid spacing={10} minChildWidth='350px' >
-      <Box bg='gray.500' h='200px' border='1px solid' textColor='white'></Box>
+    <SimpleGrid spacing={10} minChildWidth='350px'>
+      <Box bg='gray.500' h='200px' border='1px solid' textColor='white'>
+        <Text color={{ base: 'pink', md: 'blue', lg: 'green' }}>Hello</Text>
+      </Box>
       <Box bg='gray.500' h='200px' border='1px solid' textColor='white'></Box>
       <Box bg='gray.500' h='200px' border='1px solid' textColor='white'></Box>
       <Box bg='gray.500' h='200px' border='1px solid' textColor='white'></Box>
