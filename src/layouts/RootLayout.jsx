@@ -19,6 +19,7 @@ export default function RootLayout() {
       <GridItem
         as='main'
         colSpan={{ base: 6, lg: 4, xl: 5 }}
+        bg='gray.200'
         p='40px'
       >
         <Navbar />

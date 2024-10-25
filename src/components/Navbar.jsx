@@ -14,14 +14,14 @@ export default function Navbar() {
     }
 
     return (
-        <Flex as='nav' p='10px' alignItems='center' gap='10px' color='gray.900'>
-            <Heading as='h1'>
+        <Flex as='nav' p='10px' pb={6} alignItems='center' gap='10px' color='gray.900' justifyContent='center'>
+            <Heading as='h1' >
                 Dojo Tasks
             </Heading>
             <Spacer />
 
             <HStack spacing='20px'>
-                <Box bg='gray.200' p='10px'>
+                <Box bg='gray.400' rounded={6} p='10px' color='white' fontWeight='bold'>
                     <Text>
                         M
                     </Text>

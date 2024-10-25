@@ -9,9 +9,9 @@ export default function Dashboard() {
   if (tasks.length === 0) return <Text>No tasks found.</Text>
 
   return (
-    <SimpleGrid spacing={10} minChildWidth='300px'>
+    <SimpleGrid spacing='24px' minChildWidth='300px'>
       {tasks.map(task => (
-        <Card key={task.id} borderTop='8px solid' borderColor='purple.600' bg='gray.700' _hover={{borderColor: 'purple.400', bg: '#232B3A'}} >
+        <Card key={task.id} borderTop='8px solid' borderColor='purple.600' bg='#232B3A' _hover={{borderColor: 'purple.400', bg: 'gray.700'}} >
           <CardHeader>
             <Flex alignItems='center' gap={4}>
               <Box w='50px' h='50px' bg='gray.300' alignContent='center' justifyContent='center' textAlign='center' color='gray.800'>
