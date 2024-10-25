@@ -5,6 +5,8 @@ import {
   RouterProvider
 } from 'react-router-dom'
 
+import { tasksLoader } from './pages/Dashboard'
+
 // layouts and pages
 import RootLayout from './layouts/RootLayout'
 import Dashboard from './pages/Dashboard'
@@ -17,7 +19,7 @@ import Old from './pages/old'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route index element={<Dashboard />} />
+      <Route index element={<Dashboard />} loader={tasksLoader}/>
       <Route path="create" element={<Create />} />
       <Route path="profile" element={<Profile />} />
       <Route path="pie" element={<Pie />} />
