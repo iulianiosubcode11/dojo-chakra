@@ -1,7 +1,7 @@
 import { Box, Card, CardBody, CardFooter, CardHeader, Flex, SimpleGrid, Text } from "@chakra-ui/react"
 import { useLoaderData } from "react-router-dom"
 
-export default function Dashboard-Old() {
+export default function DashboardOld() {
 
   const tasks = useLoaderData()
 

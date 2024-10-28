@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    hmr: true,
+    port: 5173,
+    strictPort: true // This will force Vite to use this specific port
   },
 })

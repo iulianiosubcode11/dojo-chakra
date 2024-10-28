@@ -1,5 +1,6 @@
 import { Box, FormControl, FormLabel, Input, FormHelperText, Textarea, Checkbox, Button, Flex, Container } from "@chakra-ui/react";
 import { Form } from "react-router-dom";
+import { redirect } from "react-router-dom";
 
 
 export default function Create() {
@@ -22,7 +23,7 @@ export default function Create() {
         border="1px solid"
         borderColor="gray.200"
       >
-        <Form>
+        <Form method="post" action="/create">
           <FormControl mb='40px'>
             <FormLabel color="gray.800">
               Title
@@ -100,4 +101,18 @@ export default function Create() {
       </Box>
     </Container>
   )
+}
+
+export const createAction = async ({ request }) => {
+  const data = await request.formData();
+
+  const task = {
+      title: data.get('title'),
+      description: data.get('description'),
+      isPriority: data.get('isPriority') === ''
+  };
+
+  console.log(task);
+
+  return redirect('/');
 }

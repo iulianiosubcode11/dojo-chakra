@@ -59,9 +59,11 @@ export default function Sidebar() {
         justifyContent={{ base: 'space-between', lg: 'flex-start' }}
         alignItems={{ base: 'center', lg: 'flex-start' }}
       >
-        <NavItem to="/" icon={CalendarIcon}>Dashboard</NavItem>
+        <NavItem to="/" icon={CalendarIcon}>Dashboard</NavItem>        
         <NavItem to="/create" icon={EditIcon}>Create</NavItem>
         <NavItem to="/profile" icon={AtSignIcon}>Profile</NavItem>
+        <NavItem to="/pie" icon={CalendarIcon}>Pie</NavItem>
+        <NavItem to="/old" icon={CalendarIcon}>Old</NavItem>
       </Flex>
     </Flex>
   )

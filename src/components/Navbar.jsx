@@ -1,7 +1,22 @@
-import { Box, Flex, Heading, Text, Button, Spacer, HStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Button, Spacer, HStack, useToast} from "@chakra-ui/react";
+import { LockIcon } from "@chakra-ui/icons";
 
 
 export default function Navbar() {
+
+    const toast = useToast()
+
+    const showToast = () => {
+        toast({
+            title: 'Logged out',
+            description: 'You have been logged out',
+            status: 'success',
+            duration: 5000,
+            isClosable: true,
+            position: 'top',
+            icon: <LockIcon />,
+        })
+    }
 
     const boxRed = {
         w: '150px',
@@ -29,7 +44,7 @@ export default function Navbar() {
                 <Text>
                     Mario@ninga.dev
                 </Text>
-                <Button colorScheme="purple">
+                <Button colorScheme="purple" onClick={showToast}>
                     Logout
                 </Button>
             </HStack>
