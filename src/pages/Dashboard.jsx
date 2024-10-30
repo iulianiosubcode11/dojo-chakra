@@ -28,11 +28,11 @@ export default function Dashboard() {
           <CardFooter color='gray.200'>
             <HStack alignContent='center' justifyContent='space-between' w='100%'>
               <HStack>
-                <Button fontSize='sm' leftIcon={<ViewIcon />}>Watch</Button>
-                <Button fontSize='sm' leftIcon={<EditIcon />} variant='outline' color='gray.300' _hover={{textcolor:'gray.800'}}>Comment</Button>
+                <Button fontSize='sm' leftIcon={<ViewIcon />} _hover={{bg:'gray.200', textColor:'black'}}>Watch</Button>
+                <Button fontSize='sm' leftIcon={<EditIcon />} variant='outline' color='gray.300' _hover={{bg:'gray.600', textColor:'white'}}>Comment</Button>
               </HStack>
               <HStack pl={2}>
-                <Button leftIcon={<CheckIcon />} variant='ghost' fontSize='xs' lineHeight='16px' color='gray.300'>FAQ</Button>
+                <Button leftIcon={<CheckIcon />} variant='ghost' fontSize='xs' lineHeight='16px' color='gray.300' _hover={{bg:'gray.600', textColor:'white'}}>FAQ</Button>
                 {/* <Text size='10px' fontSize='xs' lineHeight='16px'>Status: {task.priority || 'Unknown'}</Text> */}
               </HStack>              
             </HStack>
