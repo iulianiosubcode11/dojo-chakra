@@ -98,12 +98,7 @@ export default function Create() {
             </Button>
           </Flex>
         </Form>
-      </Box>
-      <SimpleGrid columns={3} spacing={10}>
-        <Box bg='gray.500' h='200px' border='1px solid' textColor='white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro illo voluptatibus, suscipit totam repudiandae tempore inventore qui fuga, est expedita temporibus accusamus quis necessitatibus! Laudantium possimus explicabo asperiores tenetur corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</Box>
-        <Box bg='gray.500' h='200px' border='1px solid' textColor='white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</Box>
-        <Box bg='gray.500' h='200px' border='1px solid' textColor='white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</Box>  
-      </SimpleGrid>
+      </Box>      
     </Container>
   )
 }
