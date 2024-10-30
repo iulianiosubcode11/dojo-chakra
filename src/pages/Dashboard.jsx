@@ -12,7 +12,7 @@ export default function Dashboard() {
     <SimpleGrid spacing='24px' minChildWidth='300px'>
       {tasks.map(task => (
         <Card key={task.id} borderTop='8px solid' borderColor='purple.600' bg='#232B3A' _hover={{borderColor: 'purple.400', bg: 'gray.700'}} >
-          <CardHeader>
+          <CardHeader color='gray.200'>
             <Flex alignItems='center' gap={4}>
               <Avatar src={task.img || 'https://via.placeholder.com/150'} />
               <Box>
@@ -25,14 +25,14 @@ export default function Dashboard() {
             <Text>{task.description || 'No Description'}</Text>
           </CardBody>
           <Divider borderColor='gray.600' />
-          <CardFooter>
+          <CardFooter color='gray.200'>
             <HStack alignContent='center' justifyContent='space-between' w='100%'>
               <HStack>
                 <Button fontSize='sm' leftIcon={<ViewIcon />}>Watch</Button>
-                <Button fontSize='sm' leftIcon={<EditIcon />} variant='outline'>Comment</Button>
+                <Button fontSize='sm' leftIcon={<EditIcon />} variant='outline' color='gray.300' _hover={{textcolor:'gray.800'}}>Comment</Button>
               </HStack>
               <HStack pl={2}>
-                <Button leftIcon={<CheckIcon />} variant='ghost' fontSize='xs' lineHeight='16px'>FAQ</Button>
+                <Button leftIcon={<CheckIcon />} variant='ghost' fontSize='xs' lineHeight='16px' color='gray.300'>FAQ</Button>
                 {/* <Text size='10px' fontSize='xs' lineHeight='16px'>Status: {task.priority || 'Unknown'}</Text> */}
               </HStack>              
             </HStack>
