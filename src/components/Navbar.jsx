@@ -1,6 +1,6 @@
-import { Box, Flex, Heading, Text, Button, Spacer, HStack, useToast} from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Button, Spacer, HStack, useToast, Avatar, AvatarBadge} from "@chakra-ui/react";
 import { LockIcon } from "@chakra-ui/icons";
-
+import { CheckIcon } from "@chakra-ui/icons";
 
 export default function Navbar() {
 
@@ -36,11 +36,36 @@ export default function Navbar() {
             <Spacer />
 
             <HStack spacing='20px'>
-                <Box bg='gray.400' rounded={6} p='10px' color='white' fontWeight='bold'>
-                    <Text>
-                        M
-                    </Text>
-                </Box>
+                <Avatar 
+                    name="Mario" 
+                    bg='gray.500' 
+                    color='white' 
+                    src="img/mario.png" 
+                    borderWidth="2px" 
+                    borderStyle="solid" 
+                    borderColor="gray.400"
+                >
+                    <AvatarBadge 
+                        bg='green.500' 
+                        color='white'
+                        boxSize='22px'
+                        border="2px solid"
+                        borderColor="white"
+                    >
+                        <Text 
+                            fontSize='12px' 
+                            display="flex"
+                            justifyContent="center"
+                            alignItems="center"
+                            textAlign="center"
+                            h="100%"
+                            w="100%"
+                            mt='-2px'
+                        >
+                            3
+                        </Text>
+                    </AvatarBadge>
+                </Avatar>
                 <Text>
                     Mario@ninga.dev
                 </Text>
