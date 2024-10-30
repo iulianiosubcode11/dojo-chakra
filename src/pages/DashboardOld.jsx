@@ -20,7 +20,7 @@ export default function DashboardOld() {
             <Text>Card Footer</Text>
           </CardFooter>
         </Card>
-      ))}
+      ))}     
     </SimpleGrid>
 
     //   <Flex flexWrap="wrap" justifyContent="center" gap={10}>
