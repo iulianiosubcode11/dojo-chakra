@@ -11,7 +11,7 @@ export default function Dashboard() {
   return (
     <SimpleGrid spacing='24px' minChildWidth='300px'>
       {tasks.map(task => (
-        <Card key={task.id} borderTop='8px solid' borderColor='purple.600' bg='#232B3A' _hover={{borderColor: 'purple.400', bg: 'gray.700'}} >
+        <Card key={task.id} borderTop='8px solid' borderColor='purple.600' bg='#232B3A' _hover={{borderColor: 'purple.400', bg: 'gray.700'}} overflow='hidden'>
           <CardHeader color='gray.200'>
             <Flex alignItems='center' gap={4}>
               <Avatar src={task.img || 'https://via.placeholder.com/150'} />
