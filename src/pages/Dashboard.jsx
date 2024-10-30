@@ -32,7 +32,7 @@ export default function Dashboard() {
                 <Button fontSize='sm' leftIcon={<EditIcon />} variant='outline' color='gray.300' _hover={{bg:'gray.600', textColor:'white'}}>Comment</Button>
               </HStack>
               <HStack pl={2}>
-                <Button leftIcon={<CheckIcon />} variant='ghost' fontSize='xs' lineHeight='16px' color='gray.300' _hover={{bg:'gray.600', textColor:'white'}}>FAQ</Button>
+                <Button leftIcon={<CheckIcon />} variant='ghost' fontSize='xs' lineHeight='16px' color='gray.300' _hover={{bg:'gray.600', textColor:'white'}}>FAC</Button>
                 {/* <Text size='10px' fontSize='xs' lineHeight='16px'>Status: {task.priority || 'Unknown'}</Text> */}
               </HStack>              
             </HStack>
