@@ -26,8 +26,7 @@ const router = createBrowserRouter(
       <Route path="create" element={<Create />} action={createAction} />
       <Route path="profile" element={<Profile />} />
       <Route path="pie" element={<Pie />} />
-      <Route path="old" element={<Old />} />
-      
+      <Route path="old" element={<Old />} />      
     </Route>
     <Route path="/table" element={<ResponsiveTable />} />
     </>
