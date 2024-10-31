@@ -24,9 +24,25 @@ const fonts = {
   body: `'Segoe UI', sans-serif`,
 }
 
+const components = {
+  Link: {
+    baseStyle: {
+      fontFamily: 'Segoe UI, sans-serif',
+      fontSize: 'lg',
+      color: 'brand.500',
+      fontWeight: '500',
+      _hover: {
+        color: 'brand.300',
+        textDecoration: 'underline',
+      },
+    },
+  },
+}
+
 const theme = extendTheme({
   colors,
   fonts,
+  components,
 })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
